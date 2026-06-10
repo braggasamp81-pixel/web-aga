@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website | Mufty Bragga</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Background Glow Minimalis -->
+    <div class="background-glow">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    </div>
+
+    <!-- Sistem Kontrol Tab Menggunakan Radio Button (Sembunyi) -->
+    <input type="radio" name="nav-tab" id="tab-home" checked hidden>
+    <input type="radio" name="nav-tab" id="tab-about" hidden>
+
+    <div class="container">
+        
+        <!-- Menu Navigasi Internal -->
+        <nav class="tab-navigation">
+            <label for="tab-home" class="nav-item item-home"><i class="fa-solid fa-user"></i> Profil</label>
+            <label for="tab-about" class="nav-item item-about"><i class="fa-solid fa-address-card"></i> About Me</label>
+        </nav>
+
+        <!-- KONTEN 1: HOME / PROFILE -->
+        <div class="content-wrapper home-content">
+            <section id="home" class="profile-card">
+                <div class="agaaa.jpeg">
+                    <img src="agaaa.jpeg" alt="Profile Picture">
+                </div>
+                <h1 class="name">Mufty Bragga Sampoerna</h1>
+                <p class="bio">Gamer kalo gabut. Selamat datang di halaman digital saya!</p>
+            </section>
+
+            <hr class="divider">
+
+            <section id="contact" class="social-section">
+                <h2>Connect With Me</h2>
+                <p class="sub-text">Ketuk ikon di bawah ini untuk terhubung langsung:</p>
+                
+                <div class="social-buttons">
+                    <!-- Note: Ditambahkan https:// agar link tiktok berfungsi dengan benar -->
+                    <a href="https://www.tiktok.com/@hooekpwiiih" target="_blank" class="social-btn tiktok">
+                        <i class="fab fa-tiktok"></i>
+                        <span>TikTok</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/__agaaa1?igsh=MWoyY2hnNXZsbTlxNw%3D%3D&utm_source=qr" target="_blank" class="social-btn instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- KONTEN 2: ABOUT ME (Muncul saat tab diklik) -->
+        <div class="content-wrapper about-content">
+            <section id="about-detail">
+                <h2>About Me</h2>
+                <div class="about-text-container">
+                    <p>Halo! Saya <strong>Mufty Bragga Sampoerna</strong>. Orang-orang biasanya memanggil saya Braga atau Aga. Saya adalah seorang yang santai dan punya ketertarikan besar di dunia digital.</p>
+                    
+                    <p>Di waktu luang, bermain game adalah cara terbaik saya untuk <i>refreshing</i> dari rutinitas. Selain sebagai hiburan, game juga melatih cara saya berpikir taktis dan fokus pada detail.</p>
+                    
+                    <blockquote>
+                        "Fokus pada proses, hasil akhir gak akan mengkhianati usaha."
+                    </blockquote>
+                    
+                    <p>Senang Anda mampir ke sini. Jika ingin mengobrol seputar game, teknologi, atau kolaborasi kreatif, silakan hubungi saya melalui media sosial di tab profil!</p>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+</body>
+</html>

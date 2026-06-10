@@ -1,0 +1,243 @@
+/* --- RESET & BASE STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Dark Navy/Slate jantan */
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+    padding: 20px;
+}
+
+/* --- BACKGROUND GLOW EFFECT --- */
+.background-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+}
+
+.circle-1 {
+    width: 300px;
+    height: 300px;
+    background: #10b981; /* Aksen Hijau Emerald */
+    top: -50px;
+    left: -50px;
+}
+
+.circle-2 {
+    width: 400px;
+    height: 400px;
+    background: #0284c7; /* Aksen Biru Samudra */
+    bottom: -100px;
+    right: -100px;
+}
+
+/* --- CONTAINER MAIN CARD --- */
+.container {
+    background: rgba(30, 41, 59, 0.7); /* Transparan berkelas */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- TAB NAVIGATION --- */
+.tab-navigation {
+    display: flex;
+    background: rgba(15, 23, 42, 0.6);
+    padding: 6px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #94a3b8;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-item i {
+    margin-right: 6px;
+}
+
+/* --- LOGIKA SWITCH TAB (Murni CSS) --- */
+.content-wrapper {
+    display: none; /* Sembunyikan default */
+    animation: fadeIn 0.4s ease forwards;
+}
+
+#tab-home:checked ~ .container .home-content {
+    display: block;
+}
+
+#tab-about:checked ~ .container .about-content {
+    display: block;
+}
+
+#tab-home:checked ~ .container .item-home,
+#tab-about:checked ~ .container .item-about {
+    background: #10b981; /* Warna tombol aktif saat diklik */
+    color: #0f172a;
+}
+
+/* --- KONTEN HOME / PROFILE --- */
+.profile-card {
+    text-align: center;
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, #10b981, #0284c7);
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #1e293b;
+}
+
+.name {
+    font-size: 1.4rem;
+    color: #f8fafc;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.bio {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+    margin: 25px 0;
+}
+
+/* --- SOSIAL MEDIA SECTION --- */
+.social-section h2 {
+    font-size: 1.1rem;
+    color: #f8fafc;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.sub-text {
+    font-size: 0.8rem;
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #ffffff;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.tiktok { background-color: #010101; border: 1px solid #222; }
+.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+
+/* --- KONTEN ABOUT ME --- */
+#about-detail h2 {
+    font-size: 1.3rem;
+    color: #10b981;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+#about-detail h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: #10b981;
+    bottom: -4px;
+    left: 0;
+}
+
+.about-text-container p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+blockquote {
+    border-left: 3px solid #0284c7;
+    padding-left: 10px;
+    margin: 15px 0;
+    font-style: italic;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+/* --- ANIMASI --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
